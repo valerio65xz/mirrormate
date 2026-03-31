@@ -10,7 +10,6 @@ public class VolumeButtonService extends AccessibilityService {
     public static final String PREF_VOLUME_TRIGGER = "volume_trigger_enabled";
 
     private static final int REQUIRED_PRESSES = 5;
-    private static final long RESET_INTERVAL_MS = 2500; // 2.5 seconds window
 
     private int pressCount = 0;
     private long firstPressTime = 0;
@@ -29,18 +28,16 @@ public class VolumeButtonService extends AccessibilityService {
     protected boolean onKeyEvent(KeyEvent event) {
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS_NAME, MODE_PRIVATE);
 
-        // If feature is disabled, pass the event through normally
-        if (!prefs.getBoolean(PREF_VOLUME_TRIGGER, false)) {
+        if (!prefs.getBoolean(VolumeButtonService.PREF_VOLUME_TRIGGER, false)) {
             return false;
         }
 
-        if (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_DOWN
-                && event.getAction() == KeyEvent.ACTION_DOWN) {
-
+        if (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_DOWN && event.getAction() == KeyEvent.ACTION_DOWN) {
+            long resetIntervalMs = prefs.getInt(MainActivity.PREF_VOLUME_TRIGGER_WINDOW_MS, 2000);
             long now = System.currentTimeMillis();
 
-            // Reset counter if window has expired
-            if (now - firstPressTime > RESET_INTERVAL_MS) {
+            // If the user doesn't press 5 times inside the defined time interval, reset the counter
+            if (now - firstPressTime > resetIntervalMs) {
                 pressCount = 0;
                 firstPressTime = now;
             }
@@ -51,15 +48,15 @@ public class VolumeButtonService extends AccessibilityService {
                 pressCount = 0;
                 firstPressTime = 0;
                 onFivePressesDetected();
-                return true; // consume the event — volume won't change
+                return true;
             }
         }
 
-        return false; // let the system handle it normally
+        return false;
     }
 
     private void onFivePressesDetected() {
         SharedPreferences prefs = getSharedPreferences(MainActivity.PREFS_NAME, MODE_PRIVATE);
-        RotationHelper.execute(this, prefs, null); // null = no tile to update or collapse
+        RotationHelper.execute(this, prefs, null);
     }
 }

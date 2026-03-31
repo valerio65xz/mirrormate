@@ -10,7 +10,7 @@
     <string name="pref_brightness">Set brightness to minimum when rotating</string>
     <string name="brightness_hint">Useful for night use — dims the screen every time you tap the tile.</string>
     <string name="check_volume">5x volume down = toggle rotation</string>
-    <string name="volume_hint">Press volume down 5 times quickly to toggle rotation without opening Quick Settings. Requires Accessibility permission.</string>
+    <string name="volume_hint">Press volume down 5 times quickly to toggle rotation without opening Quick Settings.</string>
 
     <string name="accessibility_description">Listens for volume down button presses to trigger rotation actions</string>
     <string name="accessibility_title">Volume Trigger</string>
