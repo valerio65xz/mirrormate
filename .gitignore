@@ -1,0 +1,25 @@
+# Local configuration
+local.properties
+
+# Gradle
+.gradle/
+build/
+app/build/
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store
+
+# Keystore (NEVER commit these)
+*.jks
+*.keystore
+release/
+app/release/
+
+# Generated
+gen/
+out/
+
+# OS
+Thumbs.db
