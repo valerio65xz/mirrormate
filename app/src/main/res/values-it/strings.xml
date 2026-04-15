@@ -12,8 +12,7 @@
     <string name="label_portrait_brightness">Luminosità orientamento verticale</string>
     <string name="label_landscape_brightness">Luminosità orientamento orizzontale</string>
     <string name="check_volume">Trigger volume</string>
-    <string name="volume_down_hint">Premi rapidamente per 5 volte volume giù per attivare la rotazione schermo secondo le tue impostazioni</string>
-    <string name="volume_up_hint">Premi rapidamente per 5 volte volume su per attivare l\'assistente vocale predefinito</string>
+    <string name="volume_trigger_hint">Configura delle sequenze di tasti volume a tua scelta per lanciare manualmente la rotazione o l\'assistente vocale</string>
     <string name="label_detection_window">Finestra di attvazione (500ms – 10000ms)</string>
     <string name="current_value_ms">Valore attuale: %d ms</string>
     <string name="close_label">Chiudi</string>
@@ -24,9 +23,25 @@
     <string name="continue_label">Continua</string>
     <string name="cancel_label">Annulla</string>
     <string name="allow_restricted_settings_title">Consenti impostazioni con limitazioni</string>
-    <string name="allow_restricted_settings_message">l\'accessibilità dei trigger dei tasti di volume.\n\n  Segui questi step per abilitare correttamente l\'impostazione:\n\n  1.   → Apps → Gestione App → MirrorMate   → Clicca su ⋮ menu → \"Consenti impostazioni con limitazioni\"\n\n    ⚠️ Se il ⋮ menu non appare:    → Clicca su \"Apri Accessibilità\" → App scaricate    → Tap \"Volume Trigger\" — un popup \"Restricted setting\" verrà visualizzato    → Clicca OK ed esci da MirrorMate    → Vai su Impostazioni → Apps → Gestione App → MirrorMate    → Il ⋮ menu adesso sarà visibile in alto a destra    → Clicca su \"Abilita impostazioni restricted\"    → L\'impostazione sarà quindi attivabile su MirrorMate\n\n     2. Una volta abilitata, puoi impostare i vari trigger volume desiderati</string>
+    <string name="allow_restricted_settings_message">Quest\'app è stata scaricata al di fuori del Google Play Store, pertanto Android richiede permessi ristretti per l\'accessibilità dei trigger dei tasti di volume.\n\n  Segui questi step per abilitare correttamente l\'impostazione:\n\n  1. Vai su "Impostazioni" e poi\n   → Apps\n   → Gestione App\n   → MirrorMate\n   → Clicca su ⋮ in alto a destra e \"Consenti impostazioni con limitazioni\"\n\n    ⚠️ Se il ⋮ menu non appare:\n   → Clicca su \"Apri Accessibilità\"\n   → App scaricate\n   → Premi su \"Volume Trigger\" — un popup \"Restricted setting\" verrà visualizzato\n   → Clicca OK ed esci da MirrorMate\n   → Vai su Impostazioni → Apps → Gestione App → MirrorMate\n   → Il menu ⋮ adesso sarà visibile in alto a destra\n   → Clicca su \"Abilita impostazioni restricted\"\n   → L\'impostazione sarà quindi attivabile su MirrorMate\n\n     2. Una volta abilitata, puoi impostare i vari trigger volume desiderati</string>
     <string name="enable_accessibility_service_title">Abilità impostazioni di accessibilità</string>
     <string name="enable_accessibility_service_message">Vai su Impostazioni → Accessibilità → App scaricate → Volume Trigger e abilitalo.\n\n Una volta abilitato, il check box sarà abilitato</string>
     <string name="enable_accessibility_button_label">Apri Accessibilità</string>
     <string name="volume_trigger_setup">🔧 Setup Volume Trigger</string>
+    <string name="sequence_title">Configura sequenza di trigger</string>
+    <string name="sequence_subtitle">Configura la tua sequenza premendo in successione i tasti volume. La sequenza dev\'essere di minimo 3 e massimo 8 pressioni</string>
+    <string name="sequence_editing_rotation">Modifica: Trigger rotazione</string>
+    <string name="sequence_editing_voice">Modifica: Trigger assistente vocale</string>
+    <string name="sequence_current">Sequenza attuale: %s</string>
+    <string name="sequence_press_count">%1$d / %2$d pressioni</string>
+    <string name="sequence_instructions">▼ = volume giu   ▲ = volume su \nPremi i tasti volume per registrare la tua sequenza.</string>
+    <string name="sequence_clear">Reset</string>
+    <string name="sequence_save">Salva</string>
+    <string name="sequence_error_equal">Questa sequenza è già in uso. Per favore scegline una diversa</string>
+    <string name="sequence_error_prefix_of_other">Questa sequenza è una sotto sequenza dell\'altra già impostata, impedendone l\'utilizzo. Impostane una differente</string>
+    <string name="sequence_error_other_prefix">L\'altra sequenza è una sotto sequenza di questa generata, impedendone l\'utilizzo. Impostane una differente</string>
+    <string name="label_rotation_sequence">Sequenza trigger di rotazione</string>
+    <string name="label_voice_sequence">Sequenza trigger dell\'assistente vocale</string>
+    <string name="btn_configure_rotation">Configura sequenza di rotazione</string>
+    <string name="btn_configure_voice">Configure sequenza dell\'assistente vocale</string>
 </resources>

@@ -107,22 +107,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/volume_down_hint"
+            android:text="@string/volume_trigger_hint"
             android:textSize="12sp"
             android:textColor="?android:attr/textColorSecondary"
             android:paddingStart="32dp"
             android:paddingEnd="0dp"
-            android:layout_marginBottom="12dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/volume_up_hint"
-            android:textSize="12sp"
-            android:textColor="?android:attr/textColorSecondary"
-            android:paddingStart="32dp"
-            android:paddingEnd="0dp"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="4dp" />
 
         <LinearLayout
             android:id="@+id/layout_volume_window"
@@ -134,6 +124,7 @@
             android:layout_marginBottom="24dp"
             android:visibility="gone">
 
+            <!-- Detection window seekbar -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -154,7 +145,55 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="?android:attr/textColorSecondary"
-                android:layout_marginTop="4dp" />
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Configure rotation sequence -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_rotation_sequence"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_rotation_sequence_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_configure_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_configure_rotation"
+                android:layout_marginBottom="24dp"
+                style="?android:attr/borderlessButtonStyle" />
+
+            <!-- Configure voice sequence -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_voice_sequence"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_voice_sequence_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btn_configure_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_configure_voice"
+                style="?android:attr/borderlessButtonStyle" />
 
         </LinearLayout>
 

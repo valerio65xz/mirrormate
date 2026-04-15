@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREF_BRIGHTNESS_PORTRAIT = "brightness_portrait";
     public static final String PREF_BRIGHTNESS_LANDSCAPE = "brightness_landscape";
     public static final String PREF_VOLUME_TRIGGER_WINDOW_MS = "volume_trigger_window_ms";
+    public static final String PREF_ROTATION_SEQUENCE = "rotation_sequence";
+    public static final String PREF_VOICE_SEQUENCE    = "voice_sequence";
 
     private AlertDialog activeDialog = null;
     private SharedPreferences prefs;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox checkVolume;
     private LinearLayout layoutVolumeWindow;
     private SeekBar seekVolumeWindow;
+    private TextView tvRotationSequencePreview;
+    private TextView tvVoiceSequencePreview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
             prefs.edit()
                     .putBoolean(VolumeButtonService.PREF_VOLUME_TRIGGER, false)
                     .apply();
+        }
+
+        // Refresh current user sequence
+        if (tvRotationSequencePreview != null) {
+            tvRotationSequencePreview.setText(sequenceToReadable(
+                    prefs.getString(PREF_ROTATION_SEQUENCE, "0,0,0,0,0")));
+            tvVoiceSequencePreview.setText(sequenceToReadable(
+                    prefs.getString(PREF_VOICE_SEQUENCE, "1,1,1,1,1")));
         }
 
         if (!Settings.System.canWrite(this)) {
@@ -73,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
         // First time showing the main screen
         if (checkCollapse == null) {
             showMainScreen();
+            if (tvRotationSequencePreview != null) {
+                tvRotationSequencePreview.setText(sequenceToReadable(
+                        prefs.getString(PREF_ROTATION_SEQUENCE, "0,0,0,0,0")));
+                tvVoiceSequencePreview.setText(sequenceToReadable(
+                        prefs.getString(PREF_VOICE_SEQUENCE, "1,1,1,1,1")));
+            }
         }
     }
 
@@ -116,6 +134,8 @@ public class MainActivity extends AppCompatActivity {
         checkVolume        = findViewById(R.id.check_volume);
         layoutVolumeWindow = findViewById(R.id.layout_volume_window);
         seekVolumeWindow   = findViewById(R.id.seek_volume_window);
+        tvRotationSequencePreview = findViewById(R.id.tv_rotation_sequence_preview);
+        tvVoiceSequencePreview    = findViewById(R.id.tv_voice_sequence_preview);
     }
 
     private void loadPreferences() {
@@ -132,6 +152,11 @@ public class MainActivity extends AppCompatActivity {
         layoutVolumeWindow.setVisibility(volumeEnabled ? View.VISIBLE : View.GONE);
         // SeekBar offset: actual ms = progress + 500, so 1500ms default = progress 1000, half = 4750ms
         seekVolumeWindow.setProgress(prefs.getInt(PREF_VOLUME_TRIGGER_WINDOW_MS, 2000) - 500);
+        tvRotationSequencePreview.setText(sequenceToReadable(
+                prefs.getString(PREF_ROTATION_SEQUENCE, "0,0,0,0,0")));
+        tvVoiceSequencePreview.setText(sequenceToReadable(
+                prefs.getString(PREF_VOICE_SEQUENCE, "1,1,1,1,1")));
+
     }
 
     private void attachListeners() {
@@ -191,6 +216,17 @@ public class MainActivity extends AppCompatActivity {
                         .putInt(PREF_VOLUME_TRIGGER_WINDOW_MS, ms)
                         .apply();
             }
+        });
+
+        findViewById(R.id.btn_configure_rotation).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SequenceActivity.class);
+            intent.putExtra(SequenceActivity.EXTRA_TARGET, SequenceActivity.TARGET_ROTATION);
+            startActivity(intent);
+        });
+        findViewById(R.id.btn_configure_voice).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SequenceActivity.class);
+            intent.putExtra(SequenceActivity.EXTRA_TARGET, SequenceActivity.TARGET_VOICE);
+            startActivity(intent);
         });
     }
 
@@ -320,6 +356,17 @@ public class MainActivity extends AppCompatActivity {
 
     private int dpToPx(int dp) {
         return Math.round(dp * getResources().getDisplayMetrics().density);
+    }
+
+    private String sequenceToReadable(String seq) {
+        if (seq == null || seq.isEmpty()) return "";
+        String[] parts = seq.split(",");
+        StringBuilder sb = new StringBuilder();
+        for (String part : parts) {
+            sb.append("0".equals(part.trim()) ? "▼" : "▲");
+            sb.append(" ");
+        }
+        return sb.toString().trim();
     }
 
     // ── SimpleSeekBarListener ─────────────────────────────────────────────────

@@ -13,8 +13,7 @@
     <string name="label_portrait_brightness">Portrait brightness</string>
     <string name="label_landscape_brightness">Landscape brightness</string>
     <string name="check_volume">Volume press trigger</string>
-    <string name="volume_down_hint">Press volume down 5 times quickly to toggle rotation without opening Quick Settings.</string>
-    <string name="volume_up_hint">Press volume up 5 times quickly to awake the default vocal assistant.</string>
+    <string name="volume_trigger_hint">Configure volume sequence triggers to lunch manually the rotation with your custom settings, or the default vocal assistant</string>
     <string name="label_detection_window">Detection window (500ms – 10000ms)</string>
     <string name="current_value_ms">Current value: %d ms</string>
 
@@ -53,4 +52,26 @@
 
     <string name="accessibility_description">Listens for volume down button presses to trigger rotation actions</string>
     <string name="accessibility_title">Volume Trigger</string>
+
+    <!-- Sequence activity -->
+    <string name="sequence_title">Configure trigger sequence</string>
+    <string name="sequence_subtitle">Press volume up and down in your desired order. Min 3, max 8 presses.</string>
+    <string name="sequence_editing_rotation">Editing: Rotation trigger</string>
+    <string name="sequence_editing_voice">Editing: Voice assistant trigger</string>
+    <string name="sequence_current">Current sequence: %s</string>
+    <string name="sequence_press_count">%1$d / %2$d presses</string>
+    <string name="sequence_instructions">▼ = volume down   ▲ = volume up\nPress volume buttons to record your sequence.</string>
+    <string name="sequence_clear">Clear</string>
+    <string name="sequence_save">Save</string>
+
+    <!-- Sequence validation errors -->
+    <string name="sequence_error_equal">This sequence is identical to the other trigger. Choose a different one.</string>
+    <string name="sequence_error_prefix_of_other">This sequence is a prefix of the other trigger — it would always fire first. Make it longer or different.</string>
+    <string name="sequence_error_other_prefix">The other trigger is a prefix of this sequence — it would always fire first. Change the other trigger first.</string>
+
+    <!-- Main screen sequence section -->
+    <string name="label_rotation_sequence">Rotation trigger sequence</string>
+    <string name="label_voice_sequence">Voice assistant trigger sequence</string>
+    <string name="btn_configure_rotation">Configure rotation sequence</string>
+    <string name="btn_configure_voice">Configure voice sequence</string>
 </resources>
