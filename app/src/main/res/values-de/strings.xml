@@ -47,6 +47,8 @@
     <string name="enable_accessibility_service_message">Gehe zu Einstellungen → Bedienungshilfen → Heruntergeladene Apps → tippe auf Volume Trigger und aktiviere ihn.\n\n
         Sobald aktiviert, komm hierher zurück — das Kontrollkästchen aktiviert sich automatisch.</string>
     <string name="enable_accessibility_button_label">Bedienungshilfen öffnen</string>
+    <string name="accessibility_warning_title">⚠️ Hinweis zur Kompatibilität</string>
+    <string name="accessibility_warning_message">Einige Apps — wie Banking- oder Zahlungs-Apps — erkennen möglicherweise, dass ein Bedienungshilfen-Dienst aktiv ist, und verweigern die Funktion oder zeigen eine Warnung an.\n\nFalls das passiert, deaktiviere den Lautstärke-Auslöser in den MirrorMate-Einstellungen, bevor du diese Apps verwendest, und aktiviere ihn danach wieder.</string>
     <string name="volume_trigger_setup">🔧 Lautstärke-Auslöser einrichten</string>
     <string name="close_label">Schließen</string>
 

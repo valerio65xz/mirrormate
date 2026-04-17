@@ -47,6 +47,8 @@
     <string name="enable_accessibility_service_message">Go to Settings → Accessibility → Downloaded Apps → tap Volume Trigger and enable it.\n\n
         Once enabled, come back here — the checkbox will activate automatically.</string>
     <string name="enable_accessibility_button_label">Open Accessibility</string>
+    <string name="accessibility_warning_title">⚠️ Compatibility notice</string>
+    <string name="accessibility_warning_message">Some apps — such as banking or payment apps — may detect that an Accessibility service is active and refuse to work or show a warning.\n\nIf this happens, disable the volume trigger in MirrorMate settings before using those apps, then re-enable it afterward.</string>
     <string name="volume_trigger_setup">🔧 Volume trigger setup</string>
     <string name="close_label">Close</string>
 

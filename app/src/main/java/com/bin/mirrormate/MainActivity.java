@@ -145,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
         boolean brightnessEnabled = prefs.getBoolean(PREF_BRIGHTNESS_ENABLED, false);
         checkBrightness.setChecked(brightnessEnabled);
         layoutBrightness.setVisibility(brightnessEnabled ? View.VISIBLE : View.GONE);
-        seekPortrait.setProgress(prefs.getInt(PREF_BRIGHTNESS_PORTRAIT, 128));
-        seekLandscape.setProgress(prefs.getInt(PREF_BRIGHTNESS_LANDSCAPE, 128));
+        seekPortrait.setProgress(prefs.getInt(PREF_BRIGHTNESS_PORTRAIT, 255));
+        seekLandscape.setProgress(prefs.getInt(PREF_BRIGHTNESS_LANDSCAPE, 0));
 
         boolean volumeEnabled = prefs.getBoolean(VolumeButtonService.PREF_VOLUME_TRIGGER, false);
         checkVolume.setChecked(volumeEnabled);
@@ -303,6 +303,11 @@ public class MainActivity extends AppCompatActivity {
         addBody(layout, getString(R.string.enable_accessibility_service_message));
         addGoToButton(layout, getString(R.string.enable_accessibility_button_label),
                 this::openAccessibilitySettings);
+
+        // ── Warning: banking/sensitive apps ──────────────────────────────────  ← ADD HERE
+        addDivider(layout);
+        addSectionTitle(layout, getString(R.string.accessibility_warning_title));
+        addBody(layout, getString(R.string.accessibility_warning_message));
 
         ScrollView scrollView = new ScrollView(this);
         scrollView.addView(layout);
