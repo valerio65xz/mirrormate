@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MirrorMate</string>
+    <string name="tile_label">Bildschirm drehen</string>
+    <string name="tile_portrait">Hochformat</string>
+    <string name="tile_landscape">Querformat</string>
+
+    <string name="settings_description">Lege fest, was passiert, wenn du die Drehung über die Kachel oder die Lautstärketaste aktivierst:</string>
+    <string name="pref_collapse">Benachrichtigungsleiste nach dem Drehen schließen</string>
+    <string name="pref_collapse_hint">Schließt die Schnelleinstellungen automatisch, wenn die Kachel angetippt wird.</string>
+    <string name="pref_brightness">Helligkeit je Ausrichtung festlegen</string>
+    <string name="pref_brightness_hint">Wendet beim Wechsel der Ausrichtung eine andere Helligkeit an.</string>
+    <string name="label_portrait_brightness">Helligkeit im Hochformat</string>
+    <string name="label_landscape_brightness">Helligkeit im Querformat</string>
+    <string name="check_volume">Auslösung über Lautstärketasten</string>
+    <string name="volume_trigger_hint">Konfiguriere Lautstärketasten-Sequenzen, um die Drehung oder den Standard-Sprachassistenten manuell auszulösen</string>
+    <string name="label_detection_window">Erkennungsfenster (500ms – 10000ms)</string>
+    <string name="current_value_ms">Aktueller Wert: %d ms</string>
+
+    <string name="permission_required_title">⚠️ Berechtigung erforderlich</string>
+    <string name="permission_required_message">Diese App benötigt die Berechtigung Systemeinstellungen ändern, um Bildschirmdrehung und Helligkeit zu steuern.\n\n
+
+        Tippe auf Weiter, um den Berechtigungsbildschirm zu öffnen, und aktiviere dann den Schalter für diese App.</string>
+    <string name="continue_label">Weiter</string>
+    <string name="cancel_label">Abbrechen</string>
+
+    <string name="allow_restricted_settings_title">Eingeschränkte Einstellungen zulassen</string>
+    <string name="allow_restricted_settings_message">Da diese App außerhalb des Play Store installiert wurde, schränkt Android
+                    den Zugriff auf den Bedienungshilfen-Dienst ein.\n\n
+
+                    Befolge diese Schritte, um ihn freizuschalten:\n\n
+
+                    1. Öffne die Einstellungen deines Telefons
+                       → Apps → App-Verwaltung → MirrorMate
+                       → Tippe auf das ⋮ Drei-Punkte-Menü → "Eingeschränkte Einstellungen zulassen"\n\n
+
+                    ⚠️ Falls das ⋮ Menü nicht erscheint:
+                       → Tippe auf "Bedienungshilfen öffnen" → Heruntergeladene Apps
+                       → Tippe auf "Volume Trigger" — ein Popup "Eingeschränkte Einstellung" erscheint, tippe auf OK
+                       → Gehe dann zu Einstellungen → Apps → App-Verwaltung → MirrorMate
+                       → Das ⋮ Menü erscheint jetzt oben rechts
+                       → Tippe darauf → "Eingeschränkte Einstellungen zulassen"
+                       → Du kannst jetzt zu dieser App zurückkehren\n\n
+
+                    2. Sobald erlaubt, kannst du die Lautstärke-Auslöser konfigurieren.</string>
+    <string name="enable_accessibility_service_title">Bedienungshilfen-Dienst aktivieren</string>
+    <string name="enable_accessibility_service_message">Gehe zu Einstellungen → Bedienungshilfen → Heruntergeladene Apps → tippe auf Volume Trigger und aktiviere ihn.\n\n
+        Sobald aktiviert, komm hierher zurück — das Kontrollkästchen aktiviert sich automatisch.</string>
+    <string name="enable_accessibility_button_label">Bedienungshilfen öffnen</string>
+    <string name="volume_trigger_setup">🔧 Lautstärke-Auslöser einrichten</string>
+    <string name="close_label">Schließen</string>
+
+    <string name="accessibility_description">Erkennt Drücken der Lautstärke-runter-Taste, um Drehaktionen auszulösen</string>
+    <string name="accessibility_title">Volume Trigger</string>
+
+    <!-- Sequence activity -->
+    <string name="sequence_title">Auslösesequenz konfigurieren</string>
+    <string name="sequence_subtitle">Drücke Lautstärke rauf und runter in der gewünschten Reihenfolge. Min. 3, max. 8 Tastendrücke.</string>
+    <string name="sequence_editing_rotation">Bearbeitung: Dreh-Auslöser</string>
+    <string name="sequence_editing_voice">Bearbeitung: Sprachassistent-Auslöser</string>
+    <string name="sequence_current">Aktuelle Sequenz: %s</string>
+    <string name="sequence_press_count">%1$d / %2$d Tastendrücke</string>
+    <string name="sequence_instructions">▼ = Lautstärke runter   ▲ = Lautstärke rauf\nDrücke die Lautstärketasten, um deine Sequenz aufzuzeichnen.</string>
+    <string name="sequence_clear">Löschen</string>
+    <string name="sequence_save">Speichern</string>
+    <string name="phone_state_denied_message">Die Berechtigung "Telefonstatus lesen" ist erforderlich, um Lautstärke-Auslöser während Anrufen zu pausieren. Der Lautstärke-Auslöser kann ohne diese Berechtigung nicht aktiviert werden.</string>
+
+    <!-- Sequence validation errors -->
+    <string name="sequence_error_equal">Diese Sequenz ist identisch mit dem anderen Auslöser. Wähle eine andere.</string>
+    <string name="sequence_error_prefix_of_other">Diese Sequenz ist ein Präfix des anderen Auslösers — sie würde immer zuerst auslösen. Mach sie länger oder anders.</string>
+    <string name="sequence_error_other_prefix">Der andere Auslöser ist ein Präfix dieser Sequenz — er würde immer zuerst auslösen. Ändere zuerst den anderen Auslöser.</string>
+
+    <!-- Main screen sequence section -->
+    <string name="label_rotation_sequence">Sequenz für Dreh-Auslöser</string>
+    <string name="label_voice_sequence">Sequenz für Sprachassistent-Auslöser</string>
+    <string name="btn_configure_rotation">Drehsequenz konfigurieren</string>
+    <string name="btn_configure_voice">Sprachsequenz konfigurieren</string>
+</resources>

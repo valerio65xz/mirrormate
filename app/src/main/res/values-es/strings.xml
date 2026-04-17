@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MirrorMate</string>
+    <string name="tile_label">Rotar pantalla</string>
+    <string name="tile_portrait">Vertical</string>
+    <string name="tile_landscape">Horizontal</string>
+
+    <string name="settings_description">Configura qué ocurre cada vez que activas la rotación desde el acceso directo o el botón de volumen:</string>
+    <string name="pref_collapse">Cerrar el panel de notificaciones al rotar</string>
+    <string name="pref_collapse_hint">Cierra automáticamente los Ajustes rápidos cuando se pulsa el acceso directo.</string>
+    <string name="pref_brightness">Establecer brillo por orientación</string>
+    <string name="pref_brightness_hint">Aplica un nivel de brillo diferente al cambiar de orientación.</string>
+    <string name="label_portrait_brightness">Brillo en vertical</string>
+    <string name="label_landscape_brightness">Brillo en horizontal</string>
+    <string name="check_volume">Activación con botones de volumen</string>
+    <string name="volume_trigger_hint">Configura secuencias con los botones de volumen para activar manualmente la rotación con tu configuración personalizada, o el asistente de voz predeterminado</string>
+    <string name="label_detection_window">Ventana de detección (500ms – 10000ms)</string>
+    <string name="current_value_ms">Valor actual: %d ms</string>
+
+    <string name="permission_required_title">⚠️ Permiso requerido</string>
+    <string name="permission_required_message">Esta app necesita el permiso Modificar ajustes del sistema para controlar la rotación y el brillo de la pantalla.\n\n
+
+        Pulsa Continuar para abrir la pantalla de permisos y activa el interruptor para esta app.</string>
+    <string name="continue_label">Continuar</string>
+    <string name="cancel_label">Cancelar</string>
+
+    <string name="allow_restricted_settings_title">Permitir ajustes restringidos</string>
+    <string name="allow_restricted_settings_message">Como esta app se instaló fuera de Play Store, Android
+                    restringe el acceso al servicio de accesibilidad.\n\n
+
+                    Sigue estos pasos para desbloquearlo:\n\n
+
+                    1. Abre los Ajustes del teléfono
+                       → Aplicaciones → Gestión de apps → MirrorMate
+                       → Pulsa el menú ⋮ de tres puntos → "Permitir ajustes restringidos"\n\n
+
+                    ⚠️ Si el menú ⋮ no aparece:
+                       → Pulsa "Abrir Accesibilidad" → Apps descargadas
+                       → Pulsa "Volume Trigger" — aparecerá un aviso de "Ajuste restringido", pulsa Aceptar
+                       → Luego ve a Ajustes → Aplicaciones → Gestión de apps → MirrorMate
+                       → El menú ⋮ aparecerá ahora arriba a la derecha
+                       → Púlsalo → "Permitir ajustes restringidos"
+                       → Ya puedes volver a esta app\n\n
+
+                    2. Una vez permitido, podrás configurar las secuencias de volumen.</string>
+    <string name="enable_accessibility_service_title">Activar el servicio de accesibilidad</string>
+    <string name="enable_accessibility_service_message">Ve a Ajustes → Accesibilidad → Apps descargadas → pulsa Volume Trigger y actívalo.\n\n
+        Una vez activado, vuelve aquí — la casilla se activará automáticamente.</string>
+    <string name="enable_accessibility_button_label">Abrir Accesibilidad</string>
+    <string name="volume_trigger_setup">🔧 Configuración del activador de volumen</string>
+    <string name="close_label">Cerrar</string>
+
+    <string name="accessibility_description">Detecta las pulsaciones del botón bajar volumen para activar las acciones de rotación</string>
+    <string name="accessibility_title">Volume Trigger</string>
+
+    <!-- Sequence activity -->
+    <string name="sequence_title">Configurar secuencia de activación</string>
+    <string name="sequence_subtitle">Pulsa subir y bajar volumen en el orden que prefieras. Mín. 3, máx. 8 pulsaciones.</string>
+    <string name="sequence_editing_rotation">Editando: activador de rotación</string>
+    <string name="sequence_editing_voice">Editando: activador del asistente de voz</string>
+    <string name="sequence_current">Secuencia actual: %s</string>
+    <string name="sequence_press_count">%1$d / %2$d pulsaciones</string>
+    <string name="sequence_instructions">▼ = bajar volumen   ▲ = subir volumen\nPulsa los botones de volumen para grabar tu secuencia.</string>
+    <string name="sequence_clear">Borrar</string>
+    <string name="sequence_save">Guardar</string>
+    <string name="phone_state_denied_message">El permiso "Leer el estado del teléfono" es necesario para pausar las secuencias de volumen durante las llamadas. Las secuencias de volumen no se pueden activar sin él.</string>
+
+    <!-- Sequence validation errors -->
+    <string name="sequence_error_equal">Esta secuencia es idéntica a la otra. Elige una diferente.</string>
+    <string name="sequence_error_prefix_of_other">Esta secuencia es un prefijo de la otra — siempre se activaría primero. Hazla más larga o diferente.</string>
+    <string name="sequence_error_other_prefix">La otra secuencia es un prefijo de esta — siempre se activaría primero. Cambia primero la otra secuencia.</string>
+
+    <!-- Main screen sequence section -->
+    <string name="label_rotation_sequence">Secuencia de activación de rotación</string>
+    <string name="label_voice_sequence">Secuencia de activación del asistente de voz</string>
+    <string name="btn_configure_rotation">Configurar secuencia de rotación</string>
+    <string name="btn_configure_voice">Configurar secuencia de voz</string>
+</resources>

@@ -4,45 +4,75 @@
     <string name="tile_label">Ruota schermo</string>
     <string name="tile_portrait">Verticale</string>
     <string name="tile_landscape">Orizzontale</string>
-    <string name="settings_description">Scegli le opzioni da abilitare ogni qual volta attivi la rotazione schermo dal menu rapido o dal pulsante del volume</string>
-    <string name="pref_collapse">Chisura menu a tendina</string>
-    <string name="pref_collapse_hint">Chiude automaticamente la tendina delle impostazioni rapide quando la rotazione viene attivata</string>
-    <string name="pref_brightness">Luminosità orientamento schermo</string>
-    <string name="pref_brightness_hint">Imposta valori di luminosità a piacere per l\'orientamento verticale e orizzontale</string>
-    <string name="label_portrait_brightness">Luminosità orientamento verticale</string>
-    <string name="label_landscape_brightness">Luminosità orientamento orizzontale</string>
-    <string name="check_volume">Trigger volume</string>
-    <string name="volume_trigger_hint">Configura delle sequenze di tasti volume a tua scelta per lanciare manualmente la rotazione o l\'assistente vocale</string>
-    <string name="label_detection_window">Finestra di attvazione (500ms – 10000ms)</string>
+
+    <string name="settings_description">Configura cosa succede ogni volta che attivi la rotazione dal riquadro o dal tasto del volume:</string>
+    <string name="pref_collapse">Chiudi il pannello notifiche dopo la rotazione</string>
+    <string name="pref_collapse_hint">Chiude automaticamente le Impostazioni rapide quando si tocca il riquadro.</string>
+    <string name="pref_brightness">Imposta luminosità per orientamento</string>
+    <string name="pref_brightness_hint">Applica un livello di luminosità diverso quando si cambia orientamento.</string>
+    <string name="label_portrait_brightness">Luminosità verticale</string>
+    <string name="label_landscape_brightness">Luminosità orizzontale</string>
+    <string name="check_volume">Attivazione con tasti del volume</string>
+    <string name="volume_trigger_hint">Configura sequenze di tasti volume per attivare manualmente la rotazione con le tue impostazioni personalizzate, o l\'assistente vocale predefinito</string>
+    <string name="label_detection_window">Finestra di rilevamento (500ms – 10000ms)</string>
     <string name="current_value_ms">Valore attuale: %d ms</string>
-    <string name="close_label">Chiudi</string>
-    <string name="accessibility_description">Attiva i trigger volume per l\'attivazione della rotazione automatica e/o assistente vocale</string>
-    <string name="accessibility_title">Volume Trigger</string>
-    <string name="permission_required_title">⚠️ Permesso richiesto</string>
-    <string name="permission_required_message">Quest\'app necessita del permesso di modificare le impostazioni di sistema, per controllare luminosità e orientamento schermo.\n\n Clicca su \"continua\" per aprire le impostazioni di sistema ed abilitare il permesso</string>
+
+    <string name="permission_required_title">⚠️ Autorizzazione richiesta</string>
+    <string name="permission_required_message">Questa app ha bisogno dell\'autorizzazione Modifica impostazioni di sistema per controllare la rotazione e la luminosità dello schermo.\n\n
+
+        Tocca Continua per aprire la schermata delle autorizzazioni, poi attiva l\'opzione per quest\'app.</string>
     <string name="continue_label">Continua</string>
     <string name="cancel_label">Annulla</string>
-    <string name="allow_restricted_settings_title">Consenti impostazioni con limitazioni</string>
-    <string name="allow_restricted_settings_message">Quest\'app è stata scaricata al di fuori del Google Play Store, pertanto Android richiede permessi ristretti per l\'accessibilità dei trigger dei tasti di volume.\n\n  Segui questi step per abilitare correttamente l\'impostazione:\n\n  1. Vai su "Impostazioni" e poi\n   → Apps\n   → Gestione App\n   → MirrorMate\n   → Clicca su ⋮ in alto a destra e \"Consenti impostazioni con limitazioni\"\n\n    ⚠️ Se il ⋮ menu non appare:\n   → Clicca su \"Apri Accessibilità\"\n   → App scaricate\n   → Premi su \"Volume Trigger\" — un popup \"Restricted setting\" verrà visualizzato\n   → Clicca OK ed esci da MirrorMate\n   → Vai su Impostazioni → Apps → Gestione App → MirrorMate\n   → Il menu ⋮ adesso sarà visibile in alto a destra\n   → Clicca su \"Abilita impostazioni restricted\"\n   → L\'impostazione sarà quindi attivabile su MirrorMate\n\n     2. Una volta abilitata, puoi impostare i vari trigger volume desiderati</string>
-    <string name="enable_accessibility_service_title">Abilità impostazioni di accessibilità</string>
-    <string name="enable_accessibility_service_message">Vai su Impostazioni → Accessibilità → App scaricate → Volume Trigger e abilitalo.\n\n Una volta abilitato, il check box sarà abilitato</string>
+
+    <string name="allow_restricted_settings_title">Consenti impostazioni con restrizioni</string>
+    <string name="allow_restricted_settings_message">Poiché quest\'app è stata installata al di fuori del Play Store, Android
+                    limita l\'accesso al servizio di accessibilità.\n\n
+
+                    Segui questi passaggi per sbloccarlo:\n\n
+
+                    1. Apri le Impostazioni del telefono
+                       → App → Gestione app → MirrorMate
+                       → Tocca il menu ⋮ a tre punti → "Consenti impostazioni con restrizioni"\n\n
+
+                    ⚠️ Se il menu ⋮ non appare:
+                       → Tocca "Apri Accessibilità" → App scaricate
+                       → Tocca "Volume Trigger" — apparirà un popup "Impostazione con restrizioni", tocca OK
+                       → Poi vai in Impostazioni → App → Gestione app → MirrorMate
+                       → Il menu ⋮ apparirà ora in alto a destra
+                       → Toccalo → "Consenti impostazioni con restrizioni"
+                       → Ora puoi tornare su MirrorMate\n\n
+
+                    2. Una volta consentito, puoi impostare le sequenze volume.</string>
+    <string name="enable_accessibility_service_title">Attiva il servizio di accessibilità</string>
+    <string name="enable_accessibility_service_message">Vai in Impostazioni → Accessibilità → App scaricate → tocca Volume Trigger e attivalo.\n\n
+        Una volta attivato, torna qui — la casella di controllo si attiverà automaticamente.</string>
     <string name="enable_accessibility_button_label">Apri Accessibilità</string>
-    <string name="volume_trigger_setup">🔧 Setup Volume Trigger</string>
-    <string name="sequence_title">Configura sequenza di trigger</string>
-    <string name="sequence_subtitle">Configura la tua sequenza premendo in successione i tasti volume. La sequenza dev\'essere di minimo 3 e massimo 8 pressioni</string>
-    <string name="sequence_editing_rotation">Modifica: Trigger rotazione</string>
-    <string name="sequence_editing_voice">Modifica: Trigger assistente vocale</string>
+    <string name="volume_trigger_setup">🔧 Configurazione trigger volume</string>
+    <string name="close_label">Chiudi</string>
+
+    <string name="accessibility_description">Rileva le pressioni del tasto volume giù per attivare le azioni di rotazione</string>
+    <string name="accessibility_title">Volume Trigger</string>
+
+    <!-- Sequence activity -->
+    <string name="sequence_title">Configura sequenza di attivazione</string>
+    <string name="sequence_subtitle">Premi volume su e giù nell\'ordine desiderato. Min 3, max 8 pressioni.</string>
+    <string name="sequence_editing_rotation">Modifica: attivazione rotazione</string>
+    <string name="sequence_editing_voice">Modifica: attivazione assistente vocale</string>
     <string name="sequence_current">Sequenza attuale: %s</string>
     <string name="sequence_press_count">%1$d / %2$d pressioni</string>
-    <string name="sequence_instructions">▼ = volume giu   ▲ = volume su \nPremi i tasti volume per registrare la tua sequenza.</string>
-    <string name="sequence_clear">Reset</string>
+    <string name="sequence_instructions">▼ = volume giù   ▲ = volume su\nPremi i tasti del volume per registrare la tua sequenza.</string>
+    <string name="sequence_clear">Cancella</string>
     <string name="sequence_save">Salva</string>
-    <string name="phone_state_denied_message">Per evitare di attivare il trigger volume durante le chiamate, l\'app necessita il permesso di poter gestire le chiamate. Senza di esso, il trigger volume non verrà abilitato.</string>
-    <string name="sequence_error_equal">Questa sequenza è già in uso. Per favore scegline una diversa</string>
-    <string name="sequence_error_prefix_of_other">Questa sequenza è una sotto sequenza dell\'altra già impostata, impedendone l\'utilizzo. Impostane una differente</string>
-    <string name="sequence_error_other_prefix">L\'altra sequenza è una sotto sequenza di questa generata, impedendone l\'utilizzo. Impostane una differente</string>
-    <string name="label_rotation_sequence">Sequenza trigger di rotazione</string>
-    <string name="label_voice_sequence">Sequenza trigger dell\'assistente vocale</string>
-    <string name="btn_configure_rotation">Configura sequenza di rotazione</string>
-    <string name="btn_configure_voice">Configure sequenza dell\'assistente vocale</string>
+    <string name="phone_state_denied_message">L\'autorizzazione "Leggi lo stato del telefono" è necessaria per mettere in pausa le sequenze volume durante le chiamate. Le sequenze volume non possono essere attivate senza di essa.</string>
+
+    <!-- Sequence validation errors -->
+    <string name="sequence_error_equal">Questa sequenza è identica all\'altra. Scegline una diversa.</string>
+    <string name="sequence_error_prefix_of_other">Questa sequenza è un prefisso dell\'altra — si attiverebbe sempre per prima. Rendila più lunga o diversa.</string>
+    <string name="sequence_error_other_prefix">L\'altra sequenza è un prefisso di questa — si attiverebbe sempre per prima. Modifica prima l\'altra sequenza.</string>
+
+    <!-- Main screen sequence section -->
+    <string name="label_rotation_sequence">Sequenza di attivazione rotazione</string>
+    <string name="label_voice_sequence">Sequenza di attivazione assistente vocale</string>
+    <string name="btn_configure_rotation">Configura sequenza rotazione</string>
+    <string name="btn_configure_voice">Configura sequenza vocale</string>
 </resources>
